@@ -37,5 +37,5 @@ submitBtn.addEventListener("click", (event) => {
   }
 
   // when everything is oke -> redirect to homepage
-  window.location.replace("/");
+  window.location.replace("./index.html");
 });
