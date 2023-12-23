@@ -1,0 +1,20 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  color: #111111;
+  background-color: #f3f2ee;
+  overflow-x: hidden;
+}
+.bg-custom {
+  background-color: #f3f2ee;
+}
+p,
+a {
+  font-size: 16px;
+  color: #3d3d3d;
+}
+img {
+  max-width: 100%;
+}

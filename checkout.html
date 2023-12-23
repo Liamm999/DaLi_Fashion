@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaLi Fashion | Checkout</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+
+    <!-- Hover.css -->
+    <link href="assets/css/hover-min.css" rel="stylesheet">
+
+    <!-- Boostrap icons -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+
+    <!-- Header primary Section -->
+    <header id="headerPrimary" class="header d-none d-md-block">
+        <!-- sub-header -->
+        <div class="header bg-black">
+            <div class="container">
+                <div class="row text-white py-2 animate__animated animate__bounce">
+                    <div class="col-lg-6 col-md-7">
+                        <div>
+                            <span>Free shipping, 30-day return or refund guarantee.</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-5 d-flex justify-content-end">
+                        <div>
+                            <div class="d-flex gap-5 text-uppercase">
+                                <a class="text-white text-decoration-none" href="./signin.html">Sign in</a>
+                                <a class="text-white text-decoration-none" href="./signup.html">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation on larger screen -->
+        <div class="bg-white">
+            <div class=" container">
+                <div class="row py-3 d-flex align-items-center animate__animated animate__fadeInUp">
+                    <div class="col-lg-3 col-md-3">
+                        <div>
+                            <a href="./index.html"><img src="assets/img/logo.png"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <nav>
+                            <ul class="d-flex justify-content-around align-items-center m-0 list-unstyled">
+                                <li><a class="link-underline-danger fs-5 fw-semibold" href="./index.html">Home</a>
+                                </li>
+                                <li><a class="text-decoration-none fs-5 fw-semibold" href="./about.html">About
+                                        Us</a>
+                                </li>
+                                <li><a class="text-decoration-none fs-5 fw-semibold" href="./contact.html">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="d-flex justify-content-end gap-3">
+                            <a class="position-relative" href="./cart.html"><img src="assets/img/icon/cart.png"
+                                    width="20px">
+                                <span id="header-quantity"
+                                    class="position-absolute start-50 translate-middle-x mt-1 z-n1">
+                                    0
+                                </span>
+                            </a>
+                            <span id="header-price" class="price fs-5">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation on larger screen -->
+    </header>
+    <!-- Header primary Section -->
+
+    <!-- Header secondary -->
+    <header id="headerSecondary" class="d-md-none header">
+        <div class="bg-white">
+            <div class=" container">
+                <div class="py-3 d-flex justify-content-between animate__animated animate__fadeInUp">
+                    <div>
+                        <a href="./index.html"><img src="assets/img/logo.png"></a>
+                    </div>
+                    <div>
+                        <button id="buttonMenu" class="bg-body border-1 border-black">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header secondary -->
+
+
+    <!-- Navigation on mobile -->
+    <div id="rightNavOverlay"
+        class="d-none animate__animated animate__bounceInLeft bg-black opacity-25 position-fixed z-3 top-0 start-0 w-100 h-100">
+    </div>
+    <div id="rightNav"
+        class="d-none animate__animated animate__bounceInRight bg-white position-fixed z-3 top-0 start-0 w-75 h-100 px-4 py-5">
+        <div>
+            <div class="d-flex gap-4 justify-content-around">
+                <a class="text-decoration-none fs-6 text-uppercase" href="./signin.html">Sign in</a>
+                <a class="text-decoration-none fs-6 text-uppercase" href="./signup.html">Sign up</a>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around gap-1 my-3 mb-4">
+            <a class="position-relative" href="./cart.html"><img src="assets/img/icon/cart.png" width="18">
+                <span id="header-quantity" class="position-absolute start-50 translate-middle-x mt-1 z-n1">
+                    0
+                </span>
+            </a>
+            <span id="header-price" class="price fs-5">$0.00</span>
+        </div>
+        <div>
+            <nav>
+                <ul class="d-flex flex-column gap-3 justify-content-around list-unstyled mb-5">
+                    <li><a class="link-underline-danger fs-6 fw-semibold" href="./index.html">Home</a>
+                    </li>
+                    <li><a class="text-decoration-none fs-6 fw-semibold" href="./about.html">About
+                            Us</a>
+                    </li>
+                    <li><a class="text-decoration-none fs-6 fw-semibold" href="./contact.html">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="offcanvas__text">
+            <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+    </div>
+    <!-- Navigation on mobile -->
+
+    <!-- Breadcrumb Section -->
+    <section class="py-5 animate__animated animate__fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div>
+                        <h4>Checkout</h4>
+                        <div>
+                            <a href="./index.html">Home</a>
+                            <i class="bi bi-chevron-right"></i>
+                            <span>Checkout</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section -->
+
+
+    <!-- Checkout Section -->
+    <section class="bg-white py-5">
+        <div class="container py-5">
+            <div>
+                <form action="/">
+                    <div class="row">
+                        <!-- Input form checkout section -->
+                        <div class="col-lg-8 col-md-6 p-4 animate__animated animate__fadeInBottomLeft">
+                            <h6 class="fs-4 fw-bold mb-4 mx-0 px-0 border-bottom pb-4">Billing Details</h6>
+                            <div class="row py-2">
+                                <div class="col-lg-6">
+                                    <div>
+                                        <p>Fist Name <span class="text-danger">*</span></p>
+                                        <input class="form-control p-2 rounded-0 shadow-none" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <p>Last Name <span class="text-danger">*</span></p>
+                                        <input class="form-control p-2 rounded-0 shadow-none" type="text" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Country <span class="text-danger">*</span></p>
+                                <input class="form-control p-2 rounded-0 shadow-none" type="text" required>
+                            </div>
+                            <div class="mt-2">
+                                <p>Address <span class="text-danger">*</span></p>
+                                <input class="form-control p-2 rounded-0 shadow-none" type="text" required
+                                    placeholder="Street Address">
+                                <input class="form-control p-2 rounded-0 shadow-none my-3" type="text" required
+                                    placeholder="Apartment, suite, unite ect (optinal)">
+                            </div>
+                            <div class="mt-2">
+                                <p>Town/City <span class="text-danger">*</span></p>
+                                <input class="form-control p-2 rounded-0 shadow-none" type="text" required>
+                            </div>
+                            <div class="mt-2">
+                                <p>Country/State <span class="text-danger">*</span></p>
+                                <input class="form-control p-2 rounded-0 shadow-none" type="text" required>
+                            </div>
+                            <div class="mt-2">
+                                <p>Postcode / ZIP <span class="text-danger">*</span></p>
+                                <input class="form-control p-2 rounded-0 shadow-none" type="text" required>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-6">
+                                    <div>
+                                        <p>Phone <span class="text-danger">*</span></p>
+                                        <input class="form-control p-2 rounded-0 shadow-none" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <p>Email <span class="text-danger">*</span></p>
+                                        <input class="form-control p-2 rounded-0 shadow-none" type="text" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <label for="note">
+                                    <input class="me-3" type="checkbox" id="note">
+                                    <span>
+                                        Note about your order, e.g, special noe for delivery
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="mt-2">
+                                <p>Order notes</p>
+                                <input class="form-control p-2 rounded-0 shadow-none" type="text" required
+                                    placeholder="Notes about your order, e.g. special notes for delivery.">
+                            </div>
+                        </div>
+                        <!-- Input form checkout section -->
+
+                        <!-- Order information -->
+                        <div class="col-lg-4 col-md-6 bg-custom p-4 h-100 mt-3 m-md-0 animate__animated animate__fadeInTopRight">
+                            <div class="px-1">
+                                <h4 class="fs-4 fw-bold border-bottom pb-4 border-black text-uppercase">Your order</h4>
+                                <div class="d-flex justify-content-between pt-3">
+                                    <span>Product</span>
+                                    <span>Total</span>
+                                </div>
+                                <ul class="list-unstyled mt-3 border-bottom pb-2">
+                                    <li class="d-flex justify-content-between mb-3">
+                                        <span>
+                                            01. Vanilla salted caramel
+                                        </span>
+                                        <span>$ 300.0</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between mb-3">
+                                        <span>02. German chocolate</span>
+                                        <span>$ 170.0</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between mb-3">
+                                        <span>03. Sweet autumn</span>
+                                        <span>$ 170.0</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between mb-3">
+                                        <span>04. Cluten free mini dozen</span>
+                                        <span>$ 110.0</span>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled border-bottom pb-3">
+                                    <li class="d-flex justify-content-between">
+                                        <span>Subtotal</span>
+                                        <span class="text-danger fw-bold">$750.99</span>
+                                    </li>
+                                    <div class="py-2"></div>
+                                    <li class="d-flex justify-content-between">
+                                        <span>Total</span>
+                                        <span class="text-danger fw-bold">$750.99</span>
+                                    </li>
+                                </ul>
+                                <p>
+                                    By placing an order on DaLi Fashion, you confirm that all information provided
+                                    during the order process is accurate and complete.
+                                </p>
+                                <div>
+                                    <label for="payment">
+                                        <input class="me-3" type="checkbox" id="payment">
+                                        <span>
+                                            Check Payment
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="py-2"></div>
+                                <div>
+                                    <label for="paypal">
+                                        <input class="me-3" type="checkbox" id="paypal">
+                                        <span>
+                                            Paypal
+                                        </span>
+                                    </label>
+                                </div>
+                                <button type="submit"
+                                    class="w-100 btn bg-black text-white rounded-0 text-uppercase fw-bold px-5 py-3 mt-4">Place
+                                    Order
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Order information -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Checkout Section -->
+
+    <!-- Footer section -->
+    <footer class="bg-black text-white pt-5">
+        <div class="container py-5">
+            <div class="row gap-5 gap-md-0">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex flex-column gap-3 footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="assets/img/footer-logo.png" alt=""></a>
+                        </div>
+                        <p class="text-white opacity-75">The customer is at the heart of our unique business model,
+                            which includes design.</p>
+                        <a href="#"><img src="assets/img/payment.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6 class="text-uppercase fw-semibold">Shopping</h6>
+                        <ul class="list-unstyled">
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Clothing Store</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Trending Shoes</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Accessories</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6 class="text-uppercase fw-semibold">Shopping</h6>
+                        <ul class="list-unstyled">
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Contact Us</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Payment Methods</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Delivary</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Return &amp; Exchanges</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6 mt-0 mt-md-5 mt-lg-0">
+                    <h6 class="text-uppercase fw-semibold">NewLetter</h6>
+                    <div class="footer__newslatter">
+                        <p class="text-white opacity-75 text-decoration-none">Be the first to know about new arrivals,
+                            look books, sales &amp; promos!</p>
+                        <form action="#">
+                            <input class="border-0 bg-black text-white border-bottom" type="text"
+                                placeholder="Your email">
+                            <button class="bg-black border-0" type="submit"><i
+                                    class="text-white fs-4 bi bi-envelope"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-bottom container opacity-50 my-4"></div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="footer__copyright__text">
+                    <p class="text-white opacity-75">Copyright ©2023 by Minh Dat and Phuong Linh
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- Footer section -->
+
+    <!-- Js Plugins -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="scripts/checkout.js"></script>
+</body>
+
+</html>

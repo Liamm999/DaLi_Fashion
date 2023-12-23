@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaLi Fashion | Cart</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+
+    <!-- Hover.css -->
+    <link href="assets/css/hover-min.css" rel="stylesheet">
+
+    <!-- Boostrap icons -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header primary Section -->
+    <header id="headerPrimary" class="header d-none d-md-block">
+        <!-- sub-header -->
+        <div class="header bg-black">
+            <div class="container">
+                <div class="row text-white py-2 animate__animated animate__bounce">
+                    <div class="col-lg-6 col-md-7">
+                        <div>
+                            <span>Free shipping, 30-day return or refund guarantee.</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-5 d-flex justify-content-end">
+                        <div>
+                            <div class="d-flex gap-5 text-uppercase">
+                                <a class="text-white text-decoration-none" href="./signin.html">Sign in</a>
+                                <a class="text-white text-decoration-none" href="./signup.html">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation on larger screen -->
+        <div class="bg-white">
+            <div class=" container">
+                <div class="row py-3 d-flex align-items-center animate__animated animate__fadeInUp">
+                    <div class="col-lg-3 col-md-3">
+                        <div>
+                            <a href="./index.html"><img src="assets/img/logo.png"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <nav>
+                            <ul class="d-flex justify-content-around align-items-center m-0 list-unstyled">
+                                <li><a class="link-underline-danger fs-5 fw-semibold" href="./index.html">Home</a>
+                                </li>
+                                <li><a class="text-decoration-none fs-5 fw-semibold" href="./about.html">About
+                                        Us</a>
+                                </li>
+                                <li><a class="text-decoration-none fs-5 fw-semibold" href="./contact.html">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="d-flex justify-content-end gap-3">
+                            <a class="position-relative" href="./cart.html"><img src="assets/img/icon/cart.png"
+                                    width="20px">
+                                <span id="header-quantity"
+                                    class="position-absolute start-50 translate-middle-x mt-1 z-n1">
+                                    0
+                                </span>
+                            </a>
+                            <span id="header-price" class="price fs-5">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation on larger screen -->
+    </header>
+    <!-- Header primary Section -->
+
+    <!-- Header secondary -->
+    <header id="headerSecondary" class="d-md-none header">
+        <div class="bg-white">
+            <div class=" container">
+                <div class="py-3 d-flex justify-content-between animate__animated animate__fadeInUp">
+                    <div>
+                        <a href="./index.html"><img src="assets/img/logo.png"></a>
+                    </div>
+                    <div>
+                        <button id="buttonMenu" class="bg-body border-1 border-black">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header secondary -->
+
+
+    <!-- Navigation on mobile -->
+    <div id="rightNavOverlay"
+        class="d-none animate__animated animate__bounceInLeft bg-black opacity-25 position-fixed z-3 top-0 start-0 w-100 h-100">
+    </div>
+    <div id="rightNav"
+        class="d-none animate__animated animate__bounceInRight bg-white position-fixed z-3 top-0 start-0 w-75 h-100 px-4 py-5">
+        <div>
+            <div class="d-flex gap-4 justify-content-around">
+                <a class="text-decoration-none fs-6 text-uppercase" href="./signin.html">Sign in</a>
+                <a class="text-decoration-none fs-6 text-uppercase" href="./signup.html">Sign up</a>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around gap-1 my-3 mb-4">
+            <a href="#" class="search-switch"><img src="assets/img/icon/search.png" width="16"></a>
+            <a href="#"><img src="assets/img/icon/heart.png" width="16"></a>
+            <a class="position-relative" href="./cart.html"><img src="assets/img/icon/cart.png" width="18">
+                <span id="header-quantity" class="position-absolute start-50 translate-middle-x mt-1 z-n1">
+                    0
+                </span>
+            </a>
+            <span id="header-price" class="price fs-5">$0.00</span>
+        </div>
+        <div>
+            <nav>
+                <ul class="d-flex flex-column gap-3 justify-content-around list-unstyled mb-5">
+                    <li><a class="link-underline-danger fs-6 fw-semibold" href="./index.html">Home</a>
+                    </li>
+                    <li><a class="text-decoration-none fs-6 fw-semibold" href="./about.html">About
+                            Us</a>
+                    </li>
+                    <li><a class="text-decoration-none fs-6 fw-semibold" href="./contact.html">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="offcanvas__text">
+            <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+    </div>
+    <!-- Navigation on mobile -->
+
+    <!-- Breadcrumb Section -->
+    <section class="py-5 animate__animated animate__fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div>
+                        <h4>Cart</h4>
+                        <div>
+                            <a href="./index.html">Home</a>
+                            <i class="bi bi-chevron-right"></i>
+                            <span>Cart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section -->
+
+    <!-- cart section -->
+    <div class="bg-white w-100 py-4"></div>
+    <section class="bg-white px-3 p-lg-5">
+        <div class="container">
+            <div class="row gap-3">
+                <div class="col-12 col-lg-7 animate__animated animate__zoomInUp">
+                    <div class="row fs-6 fw-bold mb-4">
+                        <div class="px-0 col-4 col-md-2">PRODUCT</div>
+
+                        <!-- diplay space when in mobile -->
+                        <div class="d-none d-md-block col-2 col-md-4"></div>
+                        <!-- diplay space when in mobile -->
+
+                        <div class="col-3 col-md-2 d-flex justify-content-center">QUANTITY</div>
+
+                        <div class="col-3 col-md-2 d-flex justify-content-end">TOTAL</div>
+
+                        <!-- diplay space when in larger screen -->
+                        <div class="d-none col-md-2 d-md-flex justify-content-end"></div>
+                        <!-- diplay space when in larger screen -->
+
+                    </div>
+                    <div class="item row border-bottom d-flex align-items-center border-top py-4">
+                        <div class="px-0 col-4 col-md-2"><img src="assets/img/shopping-cart/cart-1.jpg" alt="cart 1">
+                            <div class="d-md-none w-75 mt-3">
+                                <div class="mb-1 fw-semibold fs-6">T-shirt Contrast Pocket</div>
+                                <strong class="fs-5">$30.00</strong>
+                            </div>
+                        </div>
+
+                        <!-- only diplay when in larger screen -->
+                        <div class="col-4 d-none d-md-block">
+                            <div class="mb-1 fw-semibold fs-6">T-shirt Contrast Pocket</div>
+                            <strong class="fs-5">$30.00</strong>
+                        </div>
+                        <!-- only diplay when in larger screen -->
+
+
+                        <div class="col-md-2 col-3 d-flex justify-content-center">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="subtractItem btn border-0 p-0 bi bi-caret-left-fill"></i>
+                                <p class="itemCount mt-3">3</p>
+                                <i class="addItem btn border-0 p-0 bi bi-caret-right-fill"></i>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-2 d-flex justify-content-end">
+                            <strong class="totalItemPrice fs-5">$90.00</strong>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end align-items-center">
+                            <i class="deleteItem fs-2 btn border-0 bi bi-x-circle-fill"></i>
+                        </div>
+                    </div>
+                    <div class="item row border-bottom d-flex align-items-center border-top py-4">
+                        <div class="px-0 col-4 col-md-2"><img src="assets/img/shopping-cart/cart-2.jpg" alt="cart 1">
+                            <div class="d-md-none w-75 mt-3">
+                                <div class="mb-1 fw-semibold fs-6">T-shirt Contrast Pocket</div>
+                                <strong class="fs-5">$30.00</strong>
+                            </div>
+                        </div>
+
+                        <!-- only diplay when in larger screen -->
+                        <div class="col-4 d-none d-md-block">
+                            <div class="mb-1 fw-semibold fs-6">T-shirt Contrast Pocket</div>
+                            <strong class="fs-5">$30.00</strong>
+                        </div>
+                        <!-- only diplay when in larger screen -->
+
+
+                        <div class="col-md-2 col-3 d-flex justify-content-center">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="subtractItem btn border-0 p-0 bi bi-caret-left-fill"></i>
+                                <p class="itemCount mt-3">3</p>
+                                <i class="addItem btn border-0 p-0 bi bi-caret-right-fill"></i>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-2 d-flex justify-content-end">
+                            <strong class="totalItemPrice fs-5">$90.00</strong>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end align-items-center">
+                            <i class="deleteItem fs-2 btn border-0 bi bi-x-circle-fill"></i>
+                        </div>
+                    </div>
+                    <div class="item row border-bottom d-flex align-items-center border-top py-4">
+                        <div class="px-0 col-4 col-md-2"><img src="assets/img/shopping-cart/cart-3.jpg" alt="cart 1">
+                            <div class="d-md-none w-75 mt-3">
+                                <div class="mb-1 fw-semibold fs-6">T-shirt Contrast Pocket</div>
+                                <strong class="fs-5">$30.00</strong>
+                            </div>
+                        </div>
+
+                        <!-- only diplay when in larger screen -->
+                        <div class="col-4 d-none d-md-block">
+                            <div class="mb-1 fw-semibold fs-6">T-shirt Contrast Pocket</div>
+                            <strong class="fs-5">$30.00</strong>
+                        </div>
+                        <!-- only diplay when in larger screen -->
+
+
+                        <div class="col-md-2 col-3 d-flex justify-content-center">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="subtractItem btn border-0 p-0 bi bi-caret-left-fill"></i>
+                                <p class="itemCount mt-3">3</p>
+                                <i class="addItem btn border-0 p-0 bi bi-caret-right-fill"></i>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-2 d-flex justify-content-end">
+                            <strong class="totalItemPrice fs-5">$90.00</strong>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end align-items-center">
+                            <i class="deleteItem fs-2 btn border-0 bi bi-x-circle-fill"></i>
+                        </div>
+                    </div>
+                    <div class="item row border-bottom d-flex align-items-center border-top py-4">
+                        <div class="px-0 col-4 col-md-2"><img src="assets/img/shopping-cart/cart-4.jpg" alt="cart 1">
+                            <div class="d-md-none w-75 mt-3">
+                                <div class="mb-1 fw-semibold fs-6">T-shirt Contrast Pocket</div>
+                                <strong class="fs-5">$30.00</strong>
+                            </div>
+                        </div>
+
+                        <!-- only diplay when in larger screen -->
+                        <div class="col-4 d-none d-md-block">
+                            <div class="mb-1 fw-semibold fs-6">T-shirt Contrast Pocket</div>
+                            <strong class="fs-5">$30.00</strong>
+                        </div>
+                        <!-- only diplay when in larger screen -->
+
+
+                        <div class="col-md-2 col-3 d-flex justify-content-center">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="subtractItem btn border-0 p-0 bi bi-caret-left-fill"></i>
+                                <p class="itemCount mt-3">3</p>
+                                <i class="addItem btn border-0 p-0 bi bi-caret-right-fill"></i>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-2 d-flex justify-content-end">
+                            <strong class="totalItemPrice fs-5">$90.00</strong>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end align-items-center">
+                            <i class="deleteItem fs-2 btn border-0 bi bi-x-circle-fill"></i>
+                        </div>
+                    </div>
+                    <!-- action button -->
+                    <div class="mt-5 d-flex px-0 justify-content-between">
+                        <a href="./index.html"
+                            class="p-2 me-2 m-md-0 btn rounded-0 border border-black bg-white text-black px-md-5 py-md-3">CONTINUE
+                            SHOPPING</a>
+                        <button id="deleteAll"
+                            class="p-2 ms-2 m-md-0 btn rounded-0 border bg-black text-white px-md-5 py-md-3">DELETE ALL
+                            CART</button>
+                    </div>
+                    <!-- action button -->
+                </div>
+
+                <div class="col-12 col-lg-4 col-start mt-5 mt-lg-0 animate__animated animate__bounceInRight">
+                    <div class="fs-6 fw-bold mb-4">
+                        CART TOTAL
+                    </div>
+                    <div class="shadow-lg w-100 p-5">
+                        <div class="d-flex justify-content-between fs-4">
+                            Total <span class="totalPrice text-danger fw-semibold">$ 169.50</span>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="./checkout.html"
+                                class="bg-black text-white btn rounded-0 py-3 px-5 fw-bold mt-5">PROCEED TO
+                                CHECKOUT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cart section -->
+
+    <div class="w-100 bg-white pb-5"></div>
+
+    <!-- Footer section -->
+    <footer class="bg-black text-white pt-5">
+        <div class="container py-5">
+            <div class="row gap-5 gap-md-0">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex flex-column gap-3 footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="assets/img/footer-logo.png" alt=""></a>
+                        </div>
+                        <p class="text-white opacity-75">The customer is at the heart of our unique business model,
+                            which includes design.</p>
+                        <a href="#"><img src="assets/img/payment.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6 class="text-uppercase fw-semibold">Shopping</h6>
+                        <ul class="list-unstyled">
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Clothing Store</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Trending Shoes</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Accessories</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6 class="text-uppercase fw-semibold">Shopping</h6>
+                        <ul class="list-unstyled">
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Contact Us</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Payment Methods</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Delivary</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Return &amp; Exchanges</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6 mt-0 mt-md-5 mt-lg-0">
+                    <h6 class="text-uppercase fw-semibold">NewLetter</h6>
+                    <div class="footer__newslatter">
+                        <p class="text-white opacity-75 text-decoration-none">Be the first to know about new arrivals,
+                            look books, sales &amp; promos!</p>
+                        <form action="#">
+                            <input class="border-0 bg-black text-white border-bottom" type="text"
+                                placeholder="Your email">
+                            <button class="bg-black border-0" type="submit"><i
+                                    class="text-white fs-4 bi bi-envelope"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-bottom container opacity-50 my-4"></div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="footer__copyright__text">
+                    <p class="text-white opacity-75">Copyright ©2023 by Minh Dat and Phuong Linh
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- Footer section -->
+
+    <!-- Js Plugins -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="scripts/cart.js"></script>
+</body>
+
+</html>

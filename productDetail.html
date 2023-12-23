@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaLi Fashion | Product Detail</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+
+    <!-- Hover.css -->
+    <link href="assets/css/hover-min.css" rel="stylesheet">
+
+    <!-- Boostrap icons -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- Header primary Section -->
+    <header id="headerPrimary" class="header d-none d-md-block">
+        <!-- sub-header -->
+        <div class="header bg-black">
+            <div class="container">
+                <div class="row text-white py-2 animate__animated animate__bounce">
+                    <div class="col-lg-6 col-md-7">
+                        <div>
+                            <span>Free shipping, 30-day return or refund guarantee.</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-5 d-flex justify-content-end">
+                        <div>
+                            <div class="d-flex gap-5 text-uppercase">
+                                <a class="text-white text-decoration-none" href="./signin.html">Sign in</a>
+                                <a class="text-white text-decoration-none" href="./signup.html">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation on larger screen -->
+        <div class="bg-white">
+            <div class=" container">
+                <div class="row py-3 d-flex align-items-center animate__animated animate__fadeInUp">
+                    <div class="col-lg-3 col-md-3">
+                        <div>
+                            <a href="./index.html"><img src="assets/img/logo.png"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <nav>
+                            <ul class="d-flex justify-content-around align-items-center m-0 list-unstyled">
+                                <li><a class="link-underline-danger fs-5 fw-semibold" href="./index.html">Home</a>
+                                </li>
+                                <li><a class="text-decoration-none fs-5 fw-semibold" href="./about.html">About
+                                        Us</a>
+                                </li>
+                                <li><a class="text-decoration-none fs-5 fw-semibold" href="./contact.html">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="d-flex justify-content-end gap-3">
+                            <a class="position-relative" href="./cart.html"><img src="assets/img/icon/cart.png"
+                                    width="24px">
+                                <span class="position-absolute header-quantity start-50 translate-middle-x mt-1 z-n1">
+                                    0
+                                </span>
+                            </a>
+                            <span class="header-price price fs-5">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation on larger screen -->
+    </header>
+    <!-- Header primary Section -->
+
+    <!-- Header secondary -->
+    <header id="headerSecondary" class="d-md-none header">
+        <div class="bg-white">
+            <div class=" container">
+                <div class="py-3 d-flex justify-content-between animate__animated animate__fadeInUp">
+                    <div>
+                        <a href="./index.html"><img src="assets/img/logo.png"></a>
+                    </div>
+                    <div>
+                        <button id="buttonMenu" class="bg-body border-1 border-black">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header secondary -->
+
+
+    <!-- Navigation on mobile -->
+    <div id="rightNavOverlay"
+        class="d-none animate__animated animate__bounceInLeft bg-black opacity-25 position-fixed z-3 top-0 start-0 w-100 h-100">
+    </div>
+    <div id="rightNav"
+        class="d-none animate__animated animate__bounceInRight bg-white position-fixed z-3 top-0 start-0 w-75 h-100 px-4 py-5">
+        <div>
+            <div class="d-flex gap-4 justify-content-around">
+                <a class="text-decoration-none fs-6 text-uppercase" href="./signin.html">Sign in</a>
+                <a class="text-decoration-none fs-6 text-uppercase" href="./signup.html">Sign up</a>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around gap-1 my-3 mb-4">
+            <a class="position-relative" href="./cart.html"><img src="assets/img/icon/cart.png" width="22">
+                <span class="position-absolute header-quantity start-50 translate-middle-x mt-1 z-n1">
+                    0
+                </span>
+            </a>
+            <span class="header-price price fs-5">$0.00</span>
+        </div>
+        <div>
+            <nav>
+                <ul class="d-flex flex-column gap-3 justify-content-around list-unstyled mb-5">
+                    <li><a class="link-underline-danger fs-6 fw-semibold" href="./index.html">Home</a>
+                    </li>
+                    <li><a class="text-decoration-none fs-6 fw-semibold" href="./about.html">About
+                            Us</a>
+                    </li>
+                    <li><a class="text-decoration-none fs-6 fw-semibold" href="./contact.html">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="offcanvas__text">
+            <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+    </div>
+    <!-- Navigation on mobile -->
+
+
+
+    <!-- Breadcrumb Section -->
+    <section class="py-5 animate__animated animate__fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <h4>Product Detail</h4>
+                        <div>
+                            <a href="./index.html">Home</a>
+                            <i class="bi bi-chevron-right"></i>
+                            <span>Product Detail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section -->
+
+
+    <!-- Product detail content -->
+
+    <!-- Product preview -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 animate__animated animate__backInLeft pb-4 pb-md-0">
+                    <div class="row">
+                        <div class="col-4 col-md-12"><img class="previewImgBtn btn border-0"
+                                src="assets/img/shop-details/thumb-1.png"></div>
+                        <div class="col-4 col-md-12"><img class="previewImgBtn btn border-0"
+                                src="assets/img/shop-details/thumb-2.png"></div>
+                        <div class="col-4 col-md-12"><img class="previewImgBtn btn border-0"
+                                src="assets/img/shop-details/thumb-3.png"></div>
+                        <div class="col-4 col-md-12"><img class="previewImgBtn btn border-0"
+                                src="assets/img/shop-details/thumb-4.png"></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 animate__animated animate__backInRight">
+                    <div class="d-flex justify-content-center">
+                        <img class="previewImg" src="assets/img/shop-details/product-big-1.png">
+                    </div>
+                </div>
+                <div class="col-12 col-md-4"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Product preview -->
+
+    <!-- product purchase -->
+    <section class="bg-white pt-5 px-2 animate__animated animate__fadeInDown">
+        <div class="container">
+            <div class="row py-5 justify-content-center">
+                <div class="col-lg-8">
+                    <div>
+                        <h4 class="text-center fw-bold">Hooded thermal anorak</h4>
+                        <div class="d-flex justify-content-center">
+                            <span class="text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </span>
+                            <span class="text-black"> - 5 Reviews</span>
+                        </div>
+                        <div class="text-center mt-3">
+                            <h3 class="fw-bold">$270.00 <span
+                                    class="fw-normal opacity-50 text-decoration-line-through fs-5">70.00</span></h3>
+                            <p class="mt-4">Coat with quilted lining and an adjustable hood. Featuring long sleeves with
+                                adjustable
+                                cuff tabs, adjustable asymmetric hem with elastic side tabs and a front zip fastening
+                                with placket.</p>
+                        </div>
+                        <div class="row justify-content-center mt-5 gap-4 gap-lg-0">
+                            <!-- size -->
+                            <div class="col-md-5 col-12">
+                                <div class="w-full mx-auto d-flex gap-3">
+                                    <div class="card-heading fw-bold">
+                                        <span>Size:</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="row opacity-75">
+                                            <span class="d-flex gap-4">
+                                                <label class="hvr-underline-from-left" for="36">36
+                                                    <input type="radio" id="36">
+                                                </label>
+                                                <label class="hvr-underline-from-left" for="37">37
+                                                    <input type="radio" id="37">
+                                                </label>
+                                                <label class="hvr-underline-from-left" for="38">38
+                                                    <input type="radio" id="38">
+                                                </label>
+
+                                                <label class="hvr-underline-from-left" for="39">39
+                                                    <input type="radio" id="39">
+                                                </label>
+                                            </span>
+                                            <span class="d-flex gap-4">
+                                                <label class="hvr-underline-from-left" for="40">40
+                                                    <input type="radio" id="40">
+                                                </label>
+                                                <label class="hvr-underline-from-left" for="41">41
+                                                    <input type="radio" id="41">
+                                                </label>
+                                                <label class="hvr-underline-from-left" for="42">42
+                                                    <input type="radio" id="42">
+                                                </label>
+                                                <label class="hvr-underline-from-left" for="43">43
+                                                    <input type="radio" id="43">
+                                                </label>
+                                            </span>
+                                            <span class="d-flex gap-4">
+                                                <label class="hvr-underline-from-left" for="44">44
+                                                    <input type="radio" id="44">
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- size -->
+
+                            <!-- color -->
+                            <div class="col-md-4 col-12">
+                                <div class="d-flex gap-3">
+                                    <div class="card-heading fw-bold">
+                                        <span>Color:</span>
+                                    </div>
+                                    <div class="row w-75">
+                                        <div class="colorSelections col-3 fs-2 text-primary">
+                                            <i class="bi bi-circle-fill"></i>
+                                        </div>
+                                        <div class="colorSelections col-3 fs-2 text-danger opacity-25">
+                                            <i class="bi bi-circle-fill"></i>
+                                        </div>
+                                        <div class="colorSelections col-3 fs-2 text-warning opacity-25">
+                                            <i class="bi bi-circle-fill"></i>
+                                        </div>
+                                        <div class="colorSelections col-3 fs-2 text-success opacity-25">
+                                            <i class="bi bi-circle-fill"></i>
+                                        </div>
+                                        <div class="colorSelections col-3 fs-2 text-infor opacity-25">
+                                            <i class="bi bi-circle-fill"></i>
+                                        </div>
+                                        <div class="colorSelections col-3 fs-2 text-success-emphasis opacity-25">
+                                            <i class="bi bi-circle-fill"></i>
+                                        </div>
+                                        <div class="colorSelections col-3 fs-2 text-dark-emphasis opacity-25">
+                                            <i class="bi bi-circle-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- color -->
+                        </div>
+
+                        <!-- action button -->
+                        <div>
+                            <div class="row d-flex justify-content-center my-5">
+                                <div class="col-3 col-md-2 form-outline">
+                                    <input type="number" id="itemQuantity" class="form-control p-3" min="1" value="1" />
+                                </div>
+                                <div class="col-4">
+                                    <button class="addItem btn bg-black text-uppercase text-white w-100 p-1 p-sm-3">add
+                                        to
+                                        cart</button>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <span class="likeItem d-flex align-items-center gap-2 btn border-0 text-uppercase"><img
+                                        src="assets/img/icon/heart.png" width="24">
+                                    add to
+                                    wishlist
+                                </span>
+                                <span
+                                    class="d-none likedItem d-flex align-items-center gap-2 btn border-0 text-uppercase">
+                                    <i class="fs-4 bi bi-heart-fill"></i>
+                                    added to
+                                    wishlist
+                                </span>
+                            </div>
+                        </div>
+                        <!-- action button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product purchase -->
+
+    <!-- product information -->
+    <section class="bg-white py-5 px-2">
+        <div class="container">
+            <div>
+                <div class="d-flex px-5 justify-content-center align-items-end gap-1 gap-md-5">
+                    <div class="infoBtn animate__animated animate__backInLeft">
+                        <span class="btn border-0 fw-bold opacity-50">Description</span>
+                        <div class="inforBorder border-danger border-bottom"></div>
+                    </div>
+                    <div class="infoBtn animate__animated animate__backInUp">
+                        <span class="btn border-0 fw-bold opacity-50">Customer Previews</span>
+                        <div class="inforBorder border-danger"></div>
+                    </div>
+                    <div class="infoBtn animate__animated animate__backInRight">
+                        <span class="btn border-0 fw-bold opacity-50">Additional information</span>
+                        <div class="inforBorder border-danger"></div>
+                    </div>
+                </div>
+                <div class="w-100 border-bottom animate__animated animate__backInUp"></div>
+            </div>
+            <div class="animate__animated animate__backInUp">
+                <div class="mt-5">
+                    <p class="fw-bold mb-4">Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud
+                        felis.
+                        Pellentesque diam
+                        dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis
+                        drostique
+                        des commodo pharetras loremos.</p>
+                    <span>
+                        <h5 class="fw-bold">Products Infomation</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque mauris in
+                            lorem dapibus, et ornare erat commodo. Quisque ac elit vel risus gravida viverra. Nulla a
+                            augue
+                            sem. In non nibh turpis. Fusce tincidunt congue dui sit amet faucibus. Nullam nulla felis,
+                            luctus tristique ipsum vel, rutrum feugiat nulla. Curabitur sed enim arcu. Nunc vel orci sit
+                            amet mauris mattis lobortis sed eu nunc. Donec dapibus lacinia bibendum. Fusce id risus
+                            congue,
+                            interdum sapien sit amet, scelerisque nulla. Curabitur placerat pulvinar neque, sed iaculis
+                            nibh
+                            consequat ut. Curabitur quam urna, interdum eget quam id, viverra lacinia tellus. Morbi ut
+                            leo
+                            in erat ultricies lobortis vel sit amet elit. Vivamus sed sodales ex, eget vehicula justo.
+                            Vivamus vitae elit eros.</p>
+                    </span>
+                    <span>
+                        <h5 class="fw-bold">Material used</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque mauris in
+                            lorem dapibus, et ornare erat commodo. Quisque ac elit vel risus gravida viverra. Nulla a
+                            augue
+                            sem. In non nibh turpis. Fusce tincidunt congue dui sit amet faucibus. Nullam nulla felis,
+                            luctus tristique ipsum vel..</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product information -->
+
+    <!-- Product detail content -->
+
+    <!-- Footer section -->
+    <footer class="bg-black text-white pt-5 px-2">
+        <div class="container py-5">
+            <div class="row gap-5 gap-md-0">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex flex-column gap-3 footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="assets/img/footer-logo.png" alt=""></a>
+                        </div>
+                        <p class="text-white opacity-75">The customer is at the heart of our unique business model,
+                            which includes design.</p>
+                        <a href="#"><img src="assets/img/payment.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6 class="text-uppercase fw-semibold">Shopping</h6>
+                        <ul class="list-unstyled">
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Clothing Store</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Trending Shoes</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Accessories</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6 class="text-uppercase fw-semibold">Shopping</h6>
+                        <ul class="list-unstyled">
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Product Detail Us</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Payment Methods</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Delivary</a></li>
+                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
+                                    href="#">Return &amp; Exchanges</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6 mt-0 mt-md-5 mt-lg-0">
+                    <h6 class="text-uppercase fw-semibold">NewLetter</h6>
+                    <div class="footer__newslatter">
+                        <p class="text-white opacity-75 text-decoration-none">Be the first to know about new arrivals,
+                            look books, sales &amp; promos!</p>
+                        <form action="#">
+                            <input class="border-0 bg-black text-white border-bottom" type="text"
+                                placeholder="Your email">
+                            <button class="bg-black border-0" type="submit"><i
+                                    class="text-white fs-4 bi bi-envelope"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-bottom container opacity-50 my-4"></div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="footer__copyright__text">
+                    <p class="text-white opacity-75">Copyright ©2023 by Minh Dat and Phuong Linh
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- Footer section -->
+
+    <!-- Js Plugins -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="scripts/productDetail.js"></script>
+</body>
+
+</html>
