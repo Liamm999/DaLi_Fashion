@@ -14,7 +14,7 @@ const productBtns = document.querySelectorAll(".productBtn");
 
 const likeBtns = document.querySelectorAll(".likeItem");
 
-// opent filter items
+// open filter items
 function openFilter(index) {
   if (itemsData[index].classList.contains("d-none")) {
     itemsData[index].classList.remove("d-none");
