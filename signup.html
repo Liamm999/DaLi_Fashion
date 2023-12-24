@@ -28,22 +28,28 @@
 </head>
 
 <body>
-
     <!-- Header primary Section -->
     <header id="headerPrimary" class="header d-none d-md-block">
+        <!-- Header primary Section -->
+
         <!-- Navigation on larger screen -->
         <div class="bg-white">
-            <div class=" container">
+            <div class="container">
                 <div class="row py-3 d-flex align-items-center animate__animated animate__fadeInUp">
-                    <div class="col-lg-3 col-md-3">
+                    <div class="col-3">
                         <div>
-                            <a href="#"><img src="assets/img/logo.png"></a>
+                            <a href="./index.html"><img src="assets/img/logo.png"></a>
                         </div>
+                    </div>
+                    <div class="col-6">
+                    </div>
+                    <div class="col-3">
                     </div>
                 </div>
             </div>
         </div>
         <!-- Navigation on larger screen -->
+
     </header>
     <!-- Header primary Section -->
 
@@ -73,16 +79,14 @@
     </div>
     <div id="rightNav"
         class="d-none animate__animated animate__bounceInRight bg-white position-fixed z-3 top-0 start-0 w-75 h-100 px-4 py-5">
-        <div class="mb-5">
-            <a href="./index.html"><img src="assets/img/logo.png"></a>
-        </div>
         <div>
-            <div class="d-flex gap-4 justify-content-around">
+            <div class="headerAuth d-flex gap-4 justify-content-around d-none">
                 <a class="text-decoration-none fs-6 text-uppercase" href="./signin.html">Sign in</a>
                 <a class="text-decoration-none fs-6 text-uppercase" href="./signup.html">Sign up</a>
             </div>
+            <div class="headerProfile d-flex gap-4 justify-content-around">
+            </div>
         </div>
-
     </div>
     <!-- Navigation on mobile -->
 
@@ -156,45 +160,33 @@
 
     <!-- Footer section -->
     <footer class="bg-black text-white pt-5">
-        <div class="container py-5 animate__animated animate__zoomIn">
+        <div class="container py-5">
             <div class="row gap-5 gap-md-0">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="d-flex flex-column gap-3 footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="assets/img/footer-logo.png" alt=""></a>
+                            <a href="./index.html"><img src="assets/img/footer-logo.png" alt=""></a>
                         </div>
                         <p class="text-white opacity-75">The customer is at the heart of our unique business model,
                             which includes design.</p>
-                        <a href="#"><img src="assets/img/payment.png" alt=""></a>
+                        <img src="assets/img/payment.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                     <div class="footer__widget">
-                        <h6 class="text-uppercase fw-semibold">Shopping</h6>
+                        <h6 class="text-uppercase fw-semibold">information</h6>
                         <ul class="list-unstyled">
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Clothing Store</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Trending Shoes</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Accessories</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Sale</a></li>
+                            <li class="list-unstyled">
+                                <a class="text-white opacity-75 text-decoration-none" href="./about.html">About Us</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-6">
                     <div class="footer__widget">
-                        <h6 class="text-uppercase fw-semibold">Shopping</h6>
+                        <h6 class="text-uppercase fw-semibold">Contact</h6>
                         <ul class="list-unstyled">
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Contact Us</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Payment Methods</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Delivary</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Return &amp; Exchanges</a></li>
+                            <a class="text-white opacity-75 text-decoration-none" href="./contact.html">Contact Us</a>
                         </ul>
                     </div>
                 </div>
@@ -203,12 +195,6 @@
                     <div class="footer__newslatter">
                         <p class="text-white opacity-75 text-decoration-none">Be the first to know about new arrivals,
                             look books, sales &amp; promos!</p>
-                        <form action="#">
-                            <input class="border-0 bg-black text-white border-bottom" type="text"
-                                placeholder="Your email">
-                            <button class="bg-black border-0" type="submit"><i
-                                    class="text-white fs-4 bi bi-envelope"></i></button>
-                        </form>
                     </div>
                 </div>
             </div>

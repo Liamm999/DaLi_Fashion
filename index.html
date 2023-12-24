@@ -43,9 +43,13 @@
 
                     <div class="col-lg-6 col-md-5 d-flex justify-content-end">
                         <div>
-                            <div class="d-flex gap-5 text-uppercase">
+                            <div class="headerAuth d-flex gap-5 text-uppercase">
                                 <a class="text-white text-decoration-none" href="./signin.html">Sign in</a>
                                 <a class="text-white text-decoration-none" href="./signup.html">Sign up</a>
+                            </div>
+                            <div class="headerProfile d-flex gap-5 text-uppercase">
+                                <strong class="text-white text-decoration-none">Tran Minh Dat</strong>
+                                <i class="headerLogout btn border-0 p-0 text-white text-decoration-none">Logout</i>
                             </div>
                         </div>
                     </div>
@@ -122,9 +126,13 @@
     <div id="rightNav"
         class="d-none animate__animated animate__bounceInRight bg-white position-fixed z-3 top-0 start-0 w-75 h-100 px-4 py-5">
         <div>
-            <div class="d-flex gap-4 justify-content-around">
+            <div class="headerAuth d-flex gap-4 justify-content-around d-none">
                 <a class="text-decoration-none fs-6 text-uppercase" href="./signin.html">Sign in</a>
                 <a class="text-decoration-none fs-6 text-uppercase" href="./signup.html">Sign up</a>
+            </div>
+            <div class="headerProfile d-flex gap-4 justify-content-around">
+                <strong class="text-decoration-none">Tran Minh Dat</strong>
+                <i class="headerLogout btn border-0 p-0 text-decoration-none">Logout</i>
             </div>
         </div>
         <div class="d-flex justify-content-around gap-1 my-3 mb-4">
@@ -178,14 +186,6 @@
                 <!-- Filter right bar -->
                 <div class="col-lg-3 animate__animated animate__fadeInUp pe-lg-5">
                     <div>
-                        <div class="card rounded-0 border-1 p-2 border-dark-subtle">
-                            <form action="#" class="d-flex">
-                                <input class="border-0 w-100 form-control shadow-none" type="text"
-                                    placeholder="Search...">
-                                <button class="ms-4 bg-body border-0" type="submit"><i
-                                        class="bi bi-search"></i></button>
-                            </form>
-                        </div>
                         <div class="mt-5">
                             <div class="d-flex flex-column gap-3">
                                 <div class="card border-0">
@@ -197,161 +197,19 @@
                                     <div class="itemData animate__animated animate__fadeInDown ">
                                         <div>
                                             <ul class="list-unstyled">
-                                                <li class="my-2"><a
+                                                <li id="filterShoes" class="my-2"><a
                                                         class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">Men (20)</a></li>
-                                                <li class="my-2"><a
+                                                        href="#">Shoes</a></li>
+                                                <li id="filterTop" class="my-2"><a
                                                         class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">Women (20)</a></li>
-                                                <li class="my-2"><a
+                                                        href="#">Top</a></li>
+                                                <li id="filterBottom" class="my-2"><a
                                                         class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">Bags (20)</a></li>
-                                                <li class="my-2"><a
-                                                        class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">Clothing (20)</a></li>
-                                                <li class="my-2"><a
-                                                        class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">Shoes (20)</a></li>
-                                                <li class="my-2"><a
-                                                        class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">Accessories (20)</a>
-                                                </li>
+                                                        href="#">Bottom</a></li>
+                                                <li id="filterReset" class="my-2" onclick="resetProduct()"><a
+                                                        class="text-decoration-none opacity-75"
+                                                        href="#"><strong><i>All Products</i></strong></a></li>
                                             </ul>
-                                        </div>
-                                        <div class="border-bottom mt-4"></div>
-                                    </div>
-                                </div>
-                                <div class="card border-0">
-                                    <div onclick="openFilter(1)"
-                                        class="itemSelect card-heading d-flex justify-content-between align-items-center fw-bold">
-                                        <span class="fs-4">Branding</span>
-                                        <i class="fs-5 bi bi-chevron-down"></i>
-                                    </div>
-                                    <div class="itemData d-none animate__animated animate__fadeInDown">
-                                        <div>
-                                            <ul class="list-unstyled">
-                                                <li class="my-2"><a
-                                                        class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">Nike</a></li>
-                                                <li class="my-2"><a
-                                                        class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">Adidas</a></li>
-                                                <li class="my-2"><a
-                                                        class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">Puma</a></li>
-                                                <li class="my-2"><a
-                                                        class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">Biti's</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="border-bottom mt-4"></div>
-                                    </div>
-                                </div>
-                                <div class="card border-0">
-                                    <div onclick="openFilter(2)"
-                                        class="itemSelect card-heading d-flex justify-content-between align-items-center fw-bold">
-                                        <span class="fs-4">Price</span>
-                                        <i class="fs-5 bi bi-chevron-down"></i>
-                                    </div>
-                                    <div class="itemData d-none animate__animated animate__fadeInDown">
-                                        <div>
-                                            <ul class="list-unstyled">
-                                                <li class="my-2"><a
-                                                        class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">$0.00 - $50.00</a></li>
-                                                <li class="my-2"><a
-                                                        class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">$50.00 - $100.00</a></li>
-                                                <li class="my-2"><a
-                                                        class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">$100.00 - $150.00</a></li>
-                                                <li class="my-2"><a
-                                                        class="text-decoration-none opacity-50 hvr-underline-from-left"
-                                                        href="#">$150.00+</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="border-bottom mt-4"></div>
-                                    </div>
-                                </div>
-                                <div class="card border-0">
-                                    <div onclick="openFilter(3)"
-                                        class="itemSelect card-heading d-flex justify-content-between align-items-center fw-bold">
-                                        <span class="fs-4">Size</span>
-                                        <i class="fs-5 bi bi-chevron-down"></i>
-                                    </div>
-                                    <div class="itemData d-none animate__animated animate__fadeInDown">
-                                        <div>
-                                            <div class="row mt-3 opacity-75">
-                                                <span class="d-flex gap-4">
-                                                    <label class="hvr-underline-from-left" for="36">36
-                                                        <input type="radio" id="36">
-                                                    </label>
-                                                    <label class="hvr-underline-from-left" for="37">37
-                                                        <input type="radio" id="37">
-                                                    </label>
-                                                    <label class="hvr-underline-from-left" for="38">38
-                                                        <input type="radio" id="38">
-                                                    </label>
-                                                </span>
-                                                <span class="d-flex gap-4 my-4">
-                                                    <label class="hvr-underline-from-left" for="39">39
-                                                        <input type="radio" id="39">
-                                                    </label>
-                                                    <label class="hvr-underline-from-left" for="40">40
-                                                        <input type="radio" id="40">
-                                                    </label>
-                                                    <label class="hvr-underline-from-left" for="41">41
-                                                        <input type="radio" id="41">
-                                                    </label>
-                                                </span>
-                                                <span class="d-flex gap-4">
-                                                    <label class="hvr-underline-from-left" for="42">42
-                                                        <input type="radio" id="42">
-                                                    </label>
-                                                    <label class="hvr-underline-from-left" for="43">43
-                                                        <input type="radio" id="43">
-                                                    </label>
-                                                    <label class="hvr-underline-from-left" for="44">44
-                                                        <input type="radio" id="44">
-                                                    </label>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="border-bottom mt-4"></div>
-                                    </div>
-                                </div>
-                                <div class="card border-0 mb-5">
-                                    <div onclick="openFilter(4)"
-                                        class="itemSelect card-heading d-flex justify-content-between align-items-center fw-bold">
-                                        <span class="fs-4">Colors</span>
-                                        <i class="fs-5 bi bi-chevron-down"></i>
-                                    </div>
-                                    <div class="itemData d-none animate__animated animate__fadeInDown">
-                                        <div>
-                                            <div class="row w-75 mt-3">
-                                                <div class="colorSelections col-3 fs-2 text-primary">
-                                                    <i class="bi bi-circle-fill"></i>
-                                                </div>
-                                                <div class="colorSelections col-3 fs-2 text-danger opacity-25">
-                                                    <i class="bi bi-circle-fill"></i>
-                                                </div>
-                                                <div class="colorSelections col-3 fs-2 text-warning opacity-25">
-                                                    <i class="bi bi-circle-fill"></i>
-                                                </div>
-                                                <div class="colorSelections col-3 fs-2 text-success opacity-25">
-                                                    <i class="bi bi-circle-fill"></i>
-                                                </div>
-                                                <div class="colorSelections col-3 fs-2 text-infor opacity-25">
-                                                    <i class="bi bi-circle-fill"></i>
-                                                </div>
-                                                <div
-                                                    class="colorSelections col-3 fs-2 text-success-emphasis opacity-25">
-                                                    <i class="bi bi-circle-fill"></i>
-                                                </div>
-                                                <div class="colorSelections col-3 fs-2 text-dark-emphasis opacity-25">
-                                                    <i class="bi bi-circle-fill"></i>
-                                                </div>
-                                            </div>
                                         </div>
                                         <div class="border-bottom mt-4"></div>
                                     </div>
@@ -364,34 +222,12 @@
 
                 <!-- Products list -->
                 <div class="col-lg-9">
-                    <!-- fiter result -->
-                    <div>
-                        <div
-                            class="d-block d-md-flex align-items-center justify-content-between mb-4 animate__animated animate__bounceInRight">
-                            <div>
-                                <div class="">
-                                    <p>Showing 1–12 of 126 results</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="d-flex gap-2 align-items-center justify-content-md-end">
-                                    <p>Sort by Price:</p>
-                                    <select class="bg-body border-0 mb-3 fw-bold">
-                                        <option value="">Low To High</option>
-                                        <option value="">$0 - $55</option>
-                                        <option value="">$55 - $100</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- fiter result -->
 
                     <!-- products primary -->
                     <div class="d-none d-lg-block">
                         <div class="row">
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productShoes btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-1.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -418,7 +254,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productTop btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-2.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -445,7 +281,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productShoes btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-3.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -472,7 +308,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productTop btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-4.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -499,7 +335,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productShoes btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-5.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -526,7 +362,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productTop btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-6.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -553,7 +389,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productTop btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-7.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -580,7 +416,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productShoes btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-8.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -607,7 +443,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productShoes btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-9.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -634,7 +470,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productShoes btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-10.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -649,7 +485,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-4 text-start">
-                                    <h6 class="fw-semibold">Strange thing (a shoes i guess)</h6>
+                                    <h6 class="fw-semibold">A Strange Shoes</h6>
                                     <div class="rating text-warning mb-2 fs-6">
                                         <i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-fill"></i>
@@ -661,7 +497,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productBottom btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-11.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -688,7 +524,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productPrimary btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productPrimary productTop btn border-0 col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div class="position-relative">
                                     <img class="productBtn" src="assets/img/product/product-12.jpg" width="300">
                                     <div class="imageHoverIcon d-none position-absolute top-0 end-0 mt-3 me-4">
@@ -722,7 +558,7 @@
                     <div class="d-lg-none w-100">
                         <div class="row ">
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productShoes btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-1.jpg" class="w-100 productBtn">
                                 </div>
@@ -751,7 +587,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productTop btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-2.jpg" class="w-100 productBtn">
                                 </div>
@@ -780,7 +616,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productShoes btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-3.jpg" class="w-100 productBtn">
                                 </div>
@@ -809,7 +645,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productTop btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-4.jpg" class="w-100 productBtn">
                                 </div>
@@ -838,7 +674,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productShoes btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-5.jpg" class="w-100 productBtn">
                                 </div>
@@ -867,7 +703,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productTop btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-6.jpg" class="w-100 productBtn">
                                 </div>
@@ -896,7 +732,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productTop btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-7.jpg" class="w-100 productBtn">
                                 </div>
@@ -925,7 +761,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productShoes btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-8.jpg" class="w-100 productBtn">
                                 </div>
@@ -954,7 +790,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productShoes btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-9.jpg" class="w-100 productBtn">
                                 </div>
@@ -983,13 +819,13 @@
                                 </div>
                             </div>
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productShoes btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-10.jpg" class="w-10 productBtn0">
                                 </div>
                                 <div class="mt-4 text-start">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h6 class="fw-semibold">Strange thing (a sock i guess)</h6>
+                                        <h6 class="fw-semibold">A Strange shoes</h6>
                                         <div>
                                             <span
                                                 class="likeItem animate__animated animate__rotateInDownLeft text-center me-2">
@@ -1012,7 +848,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productBottom btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-11.jpg" class="w-10 productBtn0">
                                 </div>
@@ -1041,7 +877,7 @@
                                 </div>
                             </div>
                             <div
-                                class="productSecondary btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
+                                class="productSecondary productTop btn border-0 mx-auto col-lg-4 col-md-6 col-sm-6 animate__animated animate__fadeInUp">
                                 <div>
                                     <img src="assets/img/product/product-12.jpg" class="w-10 productBtn0">
                                 </div>
@@ -1073,17 +909,8 @@
                     </div>
                     <!-- Products secondary -->
 
-                    <!-- pagination -->
-                    <div class="w-100 d-flex justify-content-center gap-3 mt-5 align-items-center mb-5">
-                        <span class="navLink active border border-secondary rounded-1 px-2">
-                            <a class="text-decoration-none" href=" #">1</a>
-                        </span>
-                        <a class="navLink text-decoration-none px-2 rounded-1" href="#">2</a>
-                        <a class="navLink text-decoration-none px-2 rounded-1" href="#">3</a>
-                        <span>...</span>
-                        <a class="navLink text-decoration-none px-2 rounded-1" href="#">9</a>
+                    <div class="mb-5">
                     </div>
-                    <!-- pagination -->
 
                 </div>
                 <!-- Products list -->
@@ -1099,40 +926,28 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="d-flex flex-column gap-3 footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="assets/img/footer-logo.png" alt=""></a>
+                            <a href="./index.html"><img src="assets/img/footer-logo.png" alt=""></a>
                         </div>
                         <p class="text-white opacity-75">The customer is at the heart of our unique business model,
                             which includes design.</p>
-                        <a href="#"><img src="assets/img/payment.png" alt=""></a>
+                        <img src="assets/img/payment.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                     <div class="footer__widget">
-                        <h6 class="text-uppercase fw-semibold">Shopping</h6>
+                        <h6 class="text-uppercase fw-semibold">information</h6>
                         <ul class="list-unstyled">
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Clothing Store</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Trending Shoes</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Accessories</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Sale</a></li>
+                            <li class="list-unstyled">
+                                <a class="text-white opacity-75 text-decoration-none" href="./about.html">About Us</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-6">
                     <div class="footer__widget">
-                        <h6 class="text-uppercase fw-semibold">information</h6>
+                        <h6 class="text-uppercase fw-semibold">Contact</h6>
                         <ul class="list-unstyled">
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Contact Us</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Payment Methods</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Delivary</a></li>
-                            <li class="list-unstyled"><a class="text-white opacity-75 text-decoration-none"
-                                    href="#">Return &amp; Exchanges</a></li>
+                            <a class="text-white opacity-75 text-decoration-none" href="./contact.html">Contact Us</a>
                         </ul>
                     </div>
                 </div>
@@ -1141,12 +956,6 @@
                     <div class="footer__newslatter">
                         <p class="text-white opacity-75 text-decoration-none">Be the first to know about new arrivals,
                             look books, sales &amp; promos!</p>
-                        <form action="#">
-                            <input class="border-0 bg-black text-white border-bottom" type="text"
-                                placeholder="Your email">
-                            <button class="bg-black border-0" type="submit"><i
-                                    class="text-white fs-4 bi bi-envelope"></i></button>
-                        </form>
                     </div>
                 </div>
             </div>

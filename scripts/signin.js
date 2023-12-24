@@ -6,11 +6,14 @@ const passwordErr = document.getElementById("passwordErr");
 
 const submitBtn = document.getElementById("submitBtn");
 
+const registerButton = document.getElementById("registerButton");
+
 // validate form
 submitBtn.addEventListener("click", () => {
   console.log(emailInput.value);
   if (!emailInput.value) {
     emailErr.classList.remove("d-none");
+    return;
   }
 
   // password schema
@@ -19,5 +22,12 @@ submitBtn.addEventListener("click", () => {
 
   if (!schema.test(passwordInput.value)) {
     passwordErr.classList.remove("d-none");
+    return;
   }
+
+  localStorage.setItem("user", emailInput.value);
+});
+
+registerButton.addEventListener("click", () => {
+  window.location.replace("./signup.html");
 });

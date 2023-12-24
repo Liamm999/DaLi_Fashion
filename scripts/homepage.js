@@ -14,6 +14,13 @@ const productBtns = document.querySelectorAll(".productBtn");
 
 const likeBtns = document.querySelectorAll(".likeItem");
 
+const filterShoes = document.querySelector("#filterShoes");
+const filterTop = document.querySelector("#filterTop");
+const filterBottom = document.querySelector("#filterBottom");
+const productShoes = document.querySelectorAll(".productShoes");
+const productTop = document.querySelectorAll(".productTop");
+const productBottom = document.querySelectorAll(".productBottom");
+
 // open filter items
 function openFilter(index) {
   if (itemsData[index].classList.contains("d-none")) {
@@ -86,3 +93,70 @@ likeBtns.forEach((like) => {
     }
   });
 });
+
+// reset first status of 3 kind of products
+const resetProduct = () => {
+  productBottom.forEach((product) => {
+    product.classList.remove("d-none");
+  });
+
+  productTop.forEach((product) => {
+    product.classList.remove("d-none");
+  });
+
+  productShoes.forEach((product) => {
+    product.classList.remove("d-none");
+  });
+};
+
+// filter products by category
+filterShoes.addEventListener("click", () => {
+  resetProduct();
+
+  // hidden none filtered products
+  productBottom.forEach((product) => {
+    product.classList.add("d-none");
+  });
+
+  productTop.forEach((product) => {
+    product.classList.add("d-none");
+  });
+});
+
+filterTop.addEventListener("click", () => {
+  resetProduct();
+
+  // hidden none filtered products
+  productShoes.forEach((product) => {
+    product.classList.add("d-none");
+  });
+
+  productBottom.forEach((product) => {
+    product.classList.add("d-none");
+  });
+});
+
+filterBottom.addEventListener("click", () => {
+  resetProduct();
+
+  // hidden none filtered products
+  productShoes.forEach((product) => {
+    product.classList.add("d-none");
+  });
+
+  productTop.forEach((product) => {
+    product.classList.add("d-none");
+  });
+});
+
+// at first load -> if user not signin -> redirect to login/register page
+const checkUserSignedIn = () => {
+  if (!user) {
+    if (window.location.pathname === "/signup.html") {
+      return;
+    }
+    window.location.replace("./signin.html");
+  }
+};
+
+window.addEventListener("loadstart", checkUserSignedIn());

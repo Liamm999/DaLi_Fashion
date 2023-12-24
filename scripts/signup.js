@@ -36,6 +36,8 @@ submitBtn.addEventListener("click", (event) => {
     return;
   }
 
+  localStorage.setItem("user", emailInput.value);
+
   // when everything is oke -> redirect to homepage
   window.location.replace("./index.html");
 });
